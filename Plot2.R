@@ -2,13 +2,13 @@
 NEI <- readRDS("./exdata-data-NEI_data/summarySCC_PM25.rds")
 SCC <- readRDS("./exdata-data-NEI_data/Source_Classification_Code.rds")
 
-# Calculate annual total emissions from PM2.5
+# Calculate annual total emissions from PM2.5 in Baltimore City
 NEI_annual_total_emmission <- 
         aggregate(Emissions ~ year, data = subset(NEI,fips == "24510"), sum)
 
+# Create plot2
 png(filename = "plot2.png",
-    width = 480, height = 480)
-# Create plot2 
+    width = 480, height = 480) 
 with(NEI_annual_total_emmission, plot(year, Emissions,pch=20,
                                       xlab="Year",
                                       ylab=expression(
