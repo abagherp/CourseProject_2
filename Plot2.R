@@ -12,7 +12,8 @@ png(filename = "plot2.png",
 with(NEI_annual_total_emmission, plot(year, Emissions,pch=20,
                                       xlab="Year",
                                       ylab=expression(
-                                              paste("Total ", PM[2.5], " emission")),
+                                              paste("Total ", PM[2.5], 
+                                                    " emission")),
                                       xlim = c(1998,2008)))
 
 # Add a title
